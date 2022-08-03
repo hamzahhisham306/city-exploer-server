@@ -10,7 +10,7 @@ const app=express();
 
 app.use(cors());
 
-const PORT=3000;
+const PORT=3000 || 5000;
 const keyMovie='915a2c5b1b8723046c5bfe5167d3a0d4';
 const keyWeather='d4b28539a2b24563a94b4a3d14d3d37f';
 
