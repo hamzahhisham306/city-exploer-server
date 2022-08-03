@@ -10,9 +10,8 @@ const app=express();
 
 app.use(cors());
 
-const PORT=3000 || 5000;
-const keyMovie='915a2c5b1b8723046c5bfe5167d3a0d4';
-const keyWeather='d4b28539a2b24563a94b4a3d14d3d37f';
+const keyMovie=process.env.KEY_MOVIE;
+const keyWeather=process.env.KEY_WEATHER;
 
 const weatherData=require('./data/Weather.json');
 
@@ -71,6 +70,6 @@ class Movie{
         this.release_date = movie.release_date;
     }
 }
-app.listen(PORT,()=>{
+app.listen(process.env.PORT,()=>{
     console.log('Working Server!!!')
 })
